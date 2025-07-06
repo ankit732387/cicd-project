@@ -12,7 +12,8 @@ pipeline {
 
         stage('Build docker image') {
             steps {  
-                sh 'docker build -t ankit732387/ankitnew:$BUILD_NUMBER .'
+                'sh 'sudo docker build -t ankit732387/ankitnew:1 .'
+'
             }
         }
         stage('login to dockerhub') {
