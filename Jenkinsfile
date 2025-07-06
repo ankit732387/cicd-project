@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     environment {
-    DOCKERHUB_CREDENTIALS = credentials('cicd-project')
+    DOCKERHUB_CREDENTIALS = credentials('ankit732387')
     }
     stages { 
         stage('SCM Checkout') {
