@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     environment {
-    DOCKERHUB_CREDENTIALS = credentials('ankit732387')
+    DOCKERHUB_CREDENTIALS = credentials('ankit-kumar')
     }
     stages { 
         stage('SCM Checkout') {
@@ -12,7 +12,7 @@ pipeline {
 
         stage('Build docker image') {
             steps {  
-                sh 'docker build -t iccpinfotech/ankitnew:$BUILD_NUMBER .'
+                sh 'docker build -t ankit732387/ankitnew:$BUILD_NUMBER .'
             }
         }
         stage('login to dockerhub') {
@@ -22,7 +22,7 @@ pipeline {
         }
         stage('push image') {
             steps{
-                sh 'docker push iccpinfotech/ankitnew:$BUILD_NUMBER'
+                sh 'docker push ankit732387/ankitnew:$BUILD_NUMBER'
             }
         }
 }
